@@ -1,4 +1,6 @@
-h1 {
-  color: white;
-  background-color: black;
+
+.excel__header {
+    background: sienna;
+    display: flex;
+    position: center;
 }
