@@ -1,0 +1,24 @@
+.blog {
+    margin-top: -0.6em;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 50px 40px auto;
+    grid-template-areas: 
+        "content1 content1 content1 content1 . . . ."; 
+    &__title, &__content {
+        grid-column: 2 / -2;
+    }
+    &__content {
+        margin-top: 0.4em;
+    }
+}
+.link {
+    font-family: 'Gotham Pro L';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+    
+    color: #6A7B8E;
+}
+

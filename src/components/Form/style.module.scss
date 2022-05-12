@@ -1,0 +1,9 @@
+.form {
+    padding: 10px 0 0;
+    display: inline-flex;
+    flex-direction: column;
+    & > * ~ button {
+        margin-top: 1.5em;
+        cursor: pointer;
+    }
+}

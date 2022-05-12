@@ -1,1 +1,69 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>My project</title></head><body></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+          <title>My Excel project</title>
+<script defer src="main.bundle.js"></script></head>
+<body>
+<div class="app">
+    <div class="excel">
+        <div class="excel__header">
+
+                <input type="text" class="input" value="Новая таблица"/>
+
+            <div class="button">
+                <i class="material-icons">delete</i>
+
+                <i class="material-icons">exit_to_app</i>
+            </div>
+        </div>
+
+
+
+
+        <div class="excel__toolbar">
+            <div class="button">
+                <i class="material-icons">format_align_left</i>
+                <i class="material-icons">format_align_center</i>
+                <i class="material-icons">format_align_right</i>
+                <i class="material-icons">format_align_justify</i>
+                <i class="material-icons">format_bold</i>
+                <i class="material-icons">format_italic</i>
+                <i class="material-icons">format_underlined</i>
+            </div>
+        </div>
+
+        <div class="excel__formula">
+            <div class="formula_info">Fx</div>
+            <div class="formula_input" contenteditable="true" spellcheck="false"></div>
+
+        </div>
+
+
+        <div class="excel__table">
+            <div class="row">
+    <div class="row_info"></div>
+    <div class="row_data">
+        <div class="column">A</div>
+        <div class="column">B</div>
+        <div class="column">C</div>
+    </div>
+</div>
+            <div class="row">
+                <div class="row_info">1</div>
+                <div class="row_data">
+                    <div class="cell selected" contenteditable="">A1</div>
+                    <div class="cell" contenteditable="">B1</div>
+                    <div class="cell"contenteditable="">C1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

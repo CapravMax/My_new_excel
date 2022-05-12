@@ -1,0 +1,49 @@
+.check {
+    padding: .1em 0 0 2.95em;
+    font-family: 'Gotham Pro L';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+    min-height: 2.7em;
+    color: #6A7B8E;
+
+    & ~ & {
+        margin-top: .3rem;
+    }
+
+    &__input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: absolute;
+        &:checked + .check__box {
+            background-color: transparent;
+            background-image: url("data:image/svg+xml,%3Csvg width='21' height='15' viewBox='0 0 21 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.0012 7.13551L7.04357 13.1779C7.76743 13.9017 8.12936 14.2637 8.56982 14.2438C9.01028 14.2239 9.3381 13.8308 9.99374 13.0446L20.1863 0.823001' stroke='%235A697A' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        /*focus*/
+        &:focus + .check__box {
+        }
+        &:checked:focus + .check__box {
+        }
+        /*disabled*/
+        &:disabled + .check__box {
+            background-color: gray;
+        }
+        &:checked:disabled + .check__box {
+            background-color: gray;
+        }
+    }
+    &__box {
+        position: absolute;
+        margin-left: -2.85em;
+        padding: 2px 3px 7px 6px;
+        width: 1em;
+        height: 1em;
+        font-size: inherit;
+        background-color: transparent;
+        border: 1px solid #5A697A;
+    }
+}

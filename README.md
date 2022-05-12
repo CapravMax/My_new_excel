@@ -1,4 +1,4 @@
-# project
+# excel-project
 
 Empty project.
 

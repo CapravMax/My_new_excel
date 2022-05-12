@@ -1,0 +1,72 @@
+.cards {
+    margin-top: 0.85em;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+
+    grid-template-rows: repeat(17, 2.75rem);
+    grid-template-areas:
+        "a a a a a a a a b b b b b b c c c c c c"
+        "a a a a a a a a b b b b b b c c c c c c"
+        "a a a a a a a a b b b b b b c c c c c c"
+        "a a a a a a a a b b b b b b c c c c c c"
+        "a a a a a a a a b b b b b b c c c c c c"
+        "a a a a a a a a b b b b b b c c c c c c"
+
+        "a a a a a a a a f f f f h h h h h h h h"
+        "a a a a a a a a f f f f h h h h h h h h"
+        "a a a a a a a a f f f f h h h h h h h h"
+        "a a a a a a a a f f f f h h h h h h h h"
+        "a a a a a a a a f f f f h h h h h h h h"
+
+        "d d d d e e e e f f f f h h h h h h h h"
+        "d d d d e e e e g g g g h h h h h h h h"
+        "d d d d e e e e g g g g h h h h h h h h"
+        "d d d d e e e e g g g g h h h h h h h h"
+        "d d d d e e e e g g g g h h h h h h h h"
+        "d d d d e e e e g g g g h h h h h h h h";
+    grid-column: 1 / -1;
+    min-height: calc(17 * 2.75rem);
+}
+
+$areas: a, b, c, d, e, f, g, h;
+
+@for $i from 1 through length($areas) {
+.item#{$i} {
+    grid-area: nth($areas, $i);
+    background: url('../../assets/img/blog/#{$i}.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+}
+
+    .card {
+        &__item {
+            padding: 24px;
+            font-family: 'Gotham Pro L';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 45px;
+            line-height: 1;
+
+            color: #FFFFFF;
+
+            display: flex;
+            align-items: flex-end;
+
+            &.item6 {
+                font-size: 29px;
+            }
+
+            & a {
+                font-family: 'Gotham Pro L';
+                font-weight: inherit;
+                font-size: inherit;
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+
+        &__title {
+            max-width: 500px;
+        }
+    }

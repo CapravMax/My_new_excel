@@ -1,0 +1,68 @@
+.partners {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 45.4em;
+    grid-template-areas: 
+        ". content1 content1 content1 . img1 img1 img1"; 
+    & h3 {
+        font-size: 1.875rem;
+        line-height: 1.5;
+    }
+    h2 ~ h3 {
+        margin: .2em 0 0;
+    }
+}
+
+.block { 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__list {
+        margin: 1.5rem 0 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Gotham Pro L', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        color: #6A7B8E;
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        max-width: 496px;    
+        border-radius: 30px;
+        background-color: #F4F7FA;
+        & img {
+            max-width: 100%;
+            max-height: 536px;
+            box-shadow: 0px 20px 20px 0px rgb(0 0 0 / 15%);
+            border-radius: 30px;
+        }
+    }
+}
+.content1 {
+    padding: 1.64em 0 0 .65em;
+    grid-area: content1;
+}
+
+.img1 {
+    grid-area: img1;
+}
+
+.form {
+    margin: 0.4em 0 0 0;
+}
+// .form {
+//     padding: 40px 0 0;
+//     display: inline-flex;
+//     flex-direction: column;
+//     max-width: 274px;
+//     & > * ~ .btn {
+//         margin-top: 38px;
+//         cursor: pointer;
+//     }
+// }

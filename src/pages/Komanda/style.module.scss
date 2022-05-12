@@ -1,0 +1,106 @@
+.comands {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 7.7rem 51.5rem 51.2rem 10.6rem auto;
+    grid-template-areas:
+        ". title title title . . . ."
+        ". cards cards cards cards cards cards ."
+        ". slider slider slider slider slider slider ."
+        ". t t t t t t ."
+        "grid grid grid grid grid grid grid grid";
+    grid-auto-rows: 130px;
+    & h2.title {
+        margin-top: -.2em;
+        margin-left: 0.2em;
+        grid-area: title;
+    }
+    & .cards {
+        padding: 0 0.5em;
+        grid-area: cards;
+        display: flex;
+        gap: 1.8em;
+        &__item {
+            height: auto;
+            position: relative;
+            max-width: 454px;
+            width: 100%;
+            background: #6A7B8E;
+            background-size: contain;
+            border-radius: 30px;
+            max-height: 500px;
+            font-family: 'Gotham Pro L';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 35px;
+            line-height: 100%;
+            color: #FFFFFF;
+            & > img {
+                max-width: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 30px;
+            }
+        }
+        &__title {
+            position: absolute;
+            left: .7em;
+            bottom: .125em;
+            max-width: 200px;
+        }
+    }
+    @media screen and (max-width: 1733px) {
+        grid-template-rows: 9.7rem 51.5rem 51.2rem 10.6rem auto;
+
+        .title {
+            grid-column: 2/-3!important;
+        }
+
+    }
+}
+.slider {
+    grid-area: slider;
+    max-width: 100%;
+    & h3 {
+        margin-left: 0.3em;
+        margin-bottom: 1.125em;
+    }
+    &__container {
+        padding: 0 3.7em;
+        position: relative;
+        margin: 0 -3.7em;
+    }
+}
+
+.slide {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    max-width: 303px;
+    width: 100%;
+    height: 100%;
+    & img {
+        max-width: 100%;
+        width: 100%;
+        min-width: 100%;
+        object-fit: cover;
+    }
+    &__title {
+        position: absolute;
+        bottom: .75em;
+        left: .7em;
+        font-family: 'Gotham Pro L';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 2.1875em;
+            line-height: 1;
+            color: #fff;
+    }
+}
+.gtitle {
+    padding: 0 0 0 0.2em;
+    grid-area: t;
+    max-width: 12em;
+}
+.komanda__grid {
+    grid-area: grid;
+}

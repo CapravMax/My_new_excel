@@ -1,3 +1,2 @@
-import './styles.css';
-import './styles.scss';
+import './scss/styles.scss';
 console.log('hello world!');

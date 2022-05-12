@@ -1,0 +1,119 @@
+.block {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__list {
+        margin: 1.5rem 0 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Gotham Pro L', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        color: #6A7B8E;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        max-width: 496px;
+        border-radius: 30px;
+        background-color: #F4F7FA;
+
+        & img {
+            max-width: 100%;
+            max-height: 536px;
+            box-shadow: 0px 20px 20px 0px rgb(0 0 0 / 15%);
+            border-radius: 30px;
+        }
+    }
+}
+
+.product {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 743px 950px 650px minmax(930px, auto);
+    grid-template-areas: 
+    ". content1 content1 content1 content1 img1 img1 . "
+    ". . img2 img2 content2 content2 content2 . "
+    ". . img3 img3 content3 content3 content3 . "
+    ". . img4 img4 content4 content4 content4 . ";
+}
+
+.content1 {
+    padding: 1.3em 0 0 0.6em;
+    & h2 {
+        font-size: 45px;
+        line-height: 1;
+        & + h4 {
+            margin-top: 0.3em;
+            max-width: 23em;
+        }
+    }
+    & .block__list {
+        margin-top: 0.8em;
+    }
+    grid-area: content1;
+}
+
+.content2 {
+    padding: 0 0 0 8.8em;
+    grid-area: content2;
+    & h3 {
+        line-height: 1.5;
+    }
+    & .block__list {
+        margin-top: 0.22em;
+    }
+    & h4 {
+        margin: 1.5em 0 .1em;
+    }
+}
+
+.content3 {
+    padding: 0 0 0 8.8em;
+    grid-area: content3;
+    & h3 {
+        line-height: 1.5;
+    }
+
+    & .block__list {
+        margin-top: 0.22em;
+    }
+
+    & h4 {
+        margin: 1.5em 0 .1em;
+    }
+}
+.content4 {
+    padding: 0 0 0 8.8em;
+    & h3 {
+            line-height: 1.5;
+    }
+
+    & .block__list {
+        margin-top: 0.22em;
+    }
+
+    & h4 {
+        margin: 1.5em 0 .1em;
+    }
+    grid-area: content4;
+}
+.img1 {
+    grid-area: img1;
+} 
+.img2 {
+    padding-top: 1.6em;
+    grid-area: img2;
+}
+.img3 {
+    grid-area: img3;
+}
+.img4 {
+    grid-area: img4;
+}

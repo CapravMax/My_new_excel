@@ -1,0 +1,33 @@
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 1.3em 0;
+}
+.swiper-pagination {
+    &-bullet {
+        width: .65em;
+        height: 0.65em;
+        background: #6A7B8E;
+        opacity: 0.6;
+        &.swiper-pagination-bullet-active {
+            opacity: 1;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 180%;
+                height: 180%;
+                border: 1px solid #6A7B8E;
+                border-radius: 50%;
+                top: -50%;
+                left: -50%;
+            }
+        }
+    }
+}
+.swiper {
+    padding-right: 3em;
+}
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical>.swiper-pagination-bullets {
+    top: calc(50% + 1em);
+}

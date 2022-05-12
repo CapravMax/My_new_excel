@@ -1,0 +1,54 @@
+.zemlya {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1916px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 748px;
+    grid-template-areas: 
+    ". . img1 img1 content1 content1 content1 .";
+    & .form {
+        width: 100%;
+    }
+}
+.block { 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__list {
+        margin: 1.5rem 0 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Gotham Pro L', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        color: #6A7B8E;
+    }
+    &__img {
+    display: flex;
+    align-items: center;
+    max-width: 496px;    
+    border-radius: 30px;
+    background-color: #F4F7FA;
+        & img {
+            max-width: 100%;
+            max-height: 536px;
+            box-shadow: 0px 20px 20px 0px rgb(0 0 0 / 15%);
+            border-radius: 30px;
+        }
+    }
+}
+.content1 {
+    padding: 13em 0 0 8.8em;
+    grid-area: content1;
+    justify-content: flex-start;
+}
+.img1 {
+    grid-area: img1;
+}

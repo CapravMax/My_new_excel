@@ -1,0 +1,113 @@
+.analitika {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 745px minmax(960px, auto);
+    grid-template-areas:
+        ". content1 content1 content1 content1 img1 img1 ."
+        ". img2 img2 img2 content2 content2 content2 .";
+
+}
+.block { 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__list {
+        margin: 1.5rem 0 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Gotham Pro L', sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        color: #6A7B8E;
+    }
+    &__img {
+        display: flex;
+        align-items: center;
+        max-width: 496px;    
+        border-radius: 30px;
+        background-color: #F4F7FA;
+        & img {
+            max-width: 100%;
+            max-height: 536px;
+            box-shadow: 0px 20px 20px 0px rgb(0 0 0 / 15%);
+            border-radius: 30px;
+        }
+    }
+}
+.slider-container {
+    padding-right: 2em;
+    max-width: 52.6em;
+    height: 14em;
+    @media (max-width: 1520px) {
+        height: 22em;
+    }
+    & > * {
+        height: 100%;
+    }
+}
+
+.content1 {
+    padding: 0 0 0 .6em;
+    & h2 {
+        line-height: 1.2;
+    } 
+    & h3 {
+        line-height: 1.5;
+    }
+    & p {
+        margin-top: 1.3em;
+        font-size: 1.875em;
+        line-height: 1.5;
+        max-width: 22em;
+    }
+    grid-area: content1;
+}
+.content2 {
+    margin-left: -6em;
+    grid-area: content2;
+    & h4 {
+        max-width: 18em;
+    }
+}
+
+.img1 {
+    grid-area: img1;
+}
+
+.img2 {
+    padding: 4.6em 0 0 1em;
+    grid-area: img2;
+}
+
+.form {
+    padding: 1.4em 0 0;
+    display: grid;
+    grid-template-columns: 2/3fr 1/3fr 1fr;
+    grid-template-rows: repeat(4, 1fr) repeat(2, 1/2fr);
+    grid-template-areas:
+        "i1 . i2"
+        "i3 . i4"
+        "i5 . i6"
+        "i7 . i8"
+        "i9 i9 ."
+        "i10 i10 ."
+        "i11 i11 .";
+    @for $i from 1 through 11 {
+        &>*:nth-child(#{$i}) {
+            grid-area: i#{$i};
+            @if $i == 9 {
+                margin-top: 1.4em;
+            }
+            @if $i < 9 {
+                margin-top: 0;
+                @if $i % 2 == 0 {
+                    margin-left: 4.2em;  
+                }
+            }
+        }
+    }
+}
