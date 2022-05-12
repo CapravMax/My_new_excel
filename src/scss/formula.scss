@@ -13,15 +13,18 @@
 
 
   .formula_info {
-    border-right: 1px solid $border_color;
 
+  }
+
+  .formula_info {
+    border-right: 1px solid $border_color;
   }
 
   .formula_info {
     font-size: 18px;
     text-align: center;
     font-style: italic;
-    min-width: $info_cell_wedth;
+    min-width: $info_cell_width;
   }
 
   .formula_input {
