@@ -1,8 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
+//onst webpack = require('webpack');
+// const WebpackDevServer = require('webpack-dev-server');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -13,6 +14,13 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
         clean: true,
+    },
+    resolve: {
+        extensions: ['.js'],
+        alias: {
+            components: path.resolve (__dirname, 'src/components'),
+            core: path.resolve (__dirname, 'src/core')
+        }
     },
     mode: 'development',
     devServer: {
@@ -29,6 +37,7 @@ module.exports = {
                 filename: 'index.html',
             }),
             new MiniCssExtractPlugin(),
+            new ESLintPlugin()
 
         ],
 
